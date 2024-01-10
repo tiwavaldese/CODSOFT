@@ -42,7 +42,7 @@ equation_text = ""
 equation_label = StringVar()
 
 #setting a label within the window
-label = Label(window, textvariable= equation_label, font='arial 20',fg='red', bg= '#ADD8E6', height=2,width=24)
+label = Label(window, textvariable= equation_label, font='arial 20',fg='#483C32', bg= '#ADD8E6', height=2,width=24)
 label.pack()
 
 #setting a frame within the window
