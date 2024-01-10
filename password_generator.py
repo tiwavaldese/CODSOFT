@@ -12,6 +12,10 @@ passwordLength = int(input("How long will you like your password to be ?"))
 newPassword = []
 
 for x in range(passwordLength):
-    newPassword.append(range.choice(characters))
-    
+    #Append a random character to the newPassword
+    newPassword.append(random.choice(characters))
+#Join the list back to a string    
 finalPassword = ''.join(map(str, newPassword))
+
+#Let the user know their new password
+print("\n This is your new password:", finalPassword)
