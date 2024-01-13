@@ -6,7 +6,7 @@ import tkinter.messagebox
 #Create to−do list application window
 window = Tk()
 #Setting the App title
-window.title(" Python TO−DO List App")
+window.title("Python TO−DO List App")
 window.geometry("400x650+400+100")
 window.resizable(False,False)
 
@@ -59,14 +59,16 @@ task_entry =Entry(frame, width=18, font="arial 15", bd=0)
 task_entry.place(x=10,y=7)
 task_entry.focus()
 
-button=Button(frame,text="ADD",font="arial 20 bold", width=6, bg="gray",fg="#fff",bd=0,pady=0,command =enterTask)
+button=Button(frame,text="ADD",font="arial 20 bold",
+              width=6, bg="gray",fg="#fff",bd=0,pady=0,command =enterTask)
 button.place(x=300,y=0)
 
 #listbox
 frame1 = Frame(window,bd=3,width=700,height=180,bg="#600080")
 frame1.pack(pady=(160,0))
 
-listbox = Listbox(frame1, font= "arial 20", width=25,height=8,fg="white",bg="#600080", cursor="hand2")
+listbox = Listbox(frame1, font= "arial 20",
+                  width=25,height=8,fg="white",bg="#600080", cursor="hand2")
 listbox.pack(side= LEFT,fill=BOTH,padx=2)
 
 #Scrolldown in case the total list exceeds the size of the given window
@@ -78,6 +80,7 @@ scrollbar.config(command=listbox.yview)
 
 #delete icon
 Delete_Icon = PhotoImage(file="Image/trash.PNG")
-Button(window,image=Delete_Icon,bg="white",bd=0, command=deleteTask).pack(side=BOTTOM,pady=13)
+Button(window,image=Delete_Icon,bg="white",bd=0, 
+       command=deleteTask).pack(side=BOTTOM,pady=13)
 
 window.mainloop()

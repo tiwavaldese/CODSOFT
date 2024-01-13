@@ -20,11 +20,11 @@ def equals():
  
  #number divided by zero will throw an error       
     except ZeroDivisionError:
-        equation_label.set('error')
+        equation_label.set('Error')
         equation_text=""
 #random symbols will throw an error    
     except SyntaxError:
-        equation_label.set('syntaxerror')
+        equation_label.set('Syntaxerror')
         equation_text=""
     
 #clean the operation   
@@ -42,7 +42,8 @@ equation_text = ""
 equation_label = StringVar()
 
 #setting a label within the window
-label = Label(window, textvariable= equation_label, font='arial 20',fg='#483C32', bg= '#ADD8E6', height=2,width=24)
+label = Label(window, textvariable= equation_label, font='arial 20',
+              fg='#483C32', bg= '#ADD8E6', height=2,width=24)
 label.pack()
 
 #setting a frame within the window
@@ -50,62 +51,79 @@ frame = Frame(window,bd=3,width=700,height=180,bg="#0096FF")
 frame.pack()
 
 #values button
-button1= Button(frame,text=7,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(7))
+button1= Button(frame,text=7,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(7))
 button1.grid(row=0,column=0,padx=3,pady=3)
 
-button2= Button(frame,text=8,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(8))
+button2= Button(frame,text=8,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(8))
 button2.grid(row=0,column=1,padx=3,pady=3)
 
-button3= Button(frame,text=9,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(9))
+button3= Button(frame,text=9,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(9))
 button3.grid(row=0,column=2,padx=3,pady=3)
 
-button4= Button(frame,text=4,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(4))
+button4= Button(frame,text=4,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(4))
 button4.grid(row=1,column=0,padx=3,pady=3)
 
-button5= Button(frame,text=5,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(5))
+button5= Button(frame,text=5,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(5))
 button5.grid(row=1,column=1,padx=3,pady=3)
 
-button6= Button(frame,text=6,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(6))
+button6= Button(frame,text=6,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(6))
 button6.grid(row=1,column=2,padx=3,pady=3)
 
-button7= Button(frame,text=1,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(1))
+button7= Button(frame,text=1,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(1))
 button7.grid(row=2,column=0,padx=3,pady=3)
 
-button8= Button(frame,text=2,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(2))
+button8= Button(frame,text=2,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(2))
 button8.grid(row=2,column=1,padx=3,pady=3)
 
-button9= Button(frame,text=3,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(3))
+button9= Button(frame,text=3,height=1,width=3,bg='skyblue',fg='white',
+                font='arial 35',command=lambda: button_press(3))
 button9.grid(row=2,column=2,padx=3,pady=3)
 
-button10= Button(frame,text=0,height=1,width=3,bg='skyblue',fg='white',font='arial 35',command=lambda: button_press(0))
+button10= Button(frame,text=0,height=1,width=3,bg='skyblue',fg='white',
+                 font='arial 35',command=lambda: button_press(0))
 button10.grid(row=3,column=0,padx=3,pady=3)
 
 #decimal button
-decimal= Button(frame,text='.',height=1,width=3,bg='#0096FF',font='arial 35',command=lambda: button_press('.'))
+decimal= Button(frame,text='.',height=1,width=3,bg='#0096FF',
+                font='arial 35',command=lambda: button_press('.'))
 decimal.grid(row=3,column=1,padx=3,pady=3)
 
 #division button
-division= Button(frame,text='/',height=1,width=3,bg='#0096FF',font='arial 35',command=lambda: button_press('/'))
+division= Button(frame,text='/',height=1,width=3,bg='#0096FF',
+                 font='arial 35',command=lambda: button_press('/'))
 division.grid(row=0,column=3,padx=3,pady=3)
 
 #multiply button
-product= Button(frame,text='*',height=1,width=3,bg='#0096FF',font='arial 35',command=lambda: button_press('*'))
+product= Button(frame,text='*',height=1,width=3,bg='#0096FF',
+                font='arial 35',command=lambda: button_press('*'))
 product.grid(row=1,column=3,padx=3,pady=3)
 
 #minus button
-difference= Button(frame,text='-',height=1,width=3,bg='#0096FF',font='arial 35',command=lambda: button_press('-'))
+difference= Button(frame,text='-',height=1,width=3,bg='#0096FF',
+                   font='arial 35',command=lambda: button_press('-'))
 difference.grid(row=2,column=3,padx=3,pady=3)
 
 #addition button
-sum= Button(frame,text='+',height=1,width=3,bg='#0096FF',font='arial 35',command=lambda: button_press('+'))
+sum= Button(frame,text='+',height=1,width=3,bg='#0096FF',font='arial 35',
+            command=lambda: button_press('+'))
 sum.grid(row=3,column=3,padx=3,pady=3)
 
 #equals button
-equals= Button(frame,text='=',height=1,width=3,bg='#0096FF',font='arial 35',command=equals)
+equals= Button(frame,text='=',height=1,width=3,bg='#0096FF',
+               font='arial 35',command=equals)
 equals.grid(row=3,column=2,padx=3,pady=3)
 
 #clear button
-clear= Button(window,text='clear',height=1,width=6,bg='skyblue',fg='brown',font='arial 35',command=clear)
+clear= Button(window,text='clear',height=1,width=6,bg='skyblue',
+              fg='brown',font='arial 35',command=clear)
 clear.pack(padx=3,pady=3)
 
 
